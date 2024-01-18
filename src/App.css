@@ -1,3 +1,37 @@
+/* Add this to your CSS file
+.profile-section-mb {
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-section-mb.exiting {
+  transform: translateX(100%);
+} */
+/* CSS for your page component */
+
+.animation{
+  transform: translate(-400px 0);
+  transition:all 1s ease-in-out;
+  z-index: 2;
+}
+.animation2{
+  transform: translate(0 0);
+  transition:all 1s ease-in-out;
+  transition-delay: 1s;
+  z-index: 1;
+}
+
+.homeanimation{
+  transform: translate(-400px 0);
+  transition: all 1s ease-in-out;
+  transition-delay: 1s;
+  z-index: 1;
+}
+.homeanimation2{
+  transform: translate(0 0);
+  transition: all 1s ease-in-out;
+  z-index: 1;
+}
 .profile-header {
   margin: 0;
   padding: 0;
@@ -19,8 +53,10 @@
 }
 
 .profile-back-arrow img {
-  width: 31px;
-  height: 31px;
+  width: 60px;
+  height: 65px;
+  position: absolute;
+  top: 20px;
   flex-shrink: 0;
   padding: 15px 11px;
 }
@@ -41,17 +77,26 @@
 }
 
 .profile-header {
-  background: linear-gradient(0deg, #0A0F1F 0%, rgba(10, 15, 31, 0.00) 72.93%), url('./assets/icons/bg.png'), lightgray 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: top !important;
+  
   width: 100%;
   height: 361px;
   flex-shrink: 0;
 }
 
-.profile-icon img {
+.profile-icon{
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
   margin: auto;
+  margin-top: 15%;
+  border: 5px solid rgb(12, 179, 12);
+  
 }
 
 .profile-header-bottom h2 {

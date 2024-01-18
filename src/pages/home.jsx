@@ -6,12 +6,43 @@ import Instagram from '../assets/instagram_icon.png';
 import Play from '../assets/play.png';
 import Visa from '../assets/visa-mastercard-icon.png';
 import Footer from "../components/Footer"
-
+import { useState } from "react";
+import Profile from "./profile";
 const home = () => {
+  //const history = useHistory();
+const [isprofile,setisprofile]=useState(false);
+const [name,setName]=useState('');
+const [desc,setDesc]=useState('');
+const [imgName2,setImageName]=useState(null);
 
+  // Function to handle profile click
+  const handleProfileClick = (profileName,descr,imgN) => {
+    // You can fetch profile data based on profileName
+   // const profileData = getProfileData(profileName);
+
+    // Open the profile page with data only on mobile screens
+    if (window.innerWidth <= 768) {
+      // history.push({
+      //   pathname: '/profile',
+      // });
+      setisprofile(true);
+      setName(profileName);
+      setDesc(descr);
+      setImageName(imgN);
+     // window.location.href='/profile';
+    } else {
+    // window.location.href='/profile';
+//setisprofile(true);
+      // Open the chat page on desktop screens
+     window.location.href=`/chatPage/${profileName}`;
+    }
+  };
   return (
     <>
-      <section className="homepage">
+    {<div className={` md:hidden animation  w-screen top-0 h-screen overflow-hidden fixed  ${isprofile ? 'right-0' : 'right-[-560px]'}`}>
+      <Profile setprofile={setisprofile} name={name} desc={desc} imgName={imgName2}/>
+      </div>}
+      <section className={` min-w-[100vw] ${isprofile? 'left-[-560px] ':'left-0 '} homepage   overflow-x-hidden `}>
 
         <div className="mobile_banner"></div>
         <div className="banner_section">
@@ -293,9 +324,9 @@ const home = () => {
           <div className="profile_cards">
 
 
-            <div className="profile taapsee_Pannu_profile">
+            <div onClick={() => handleProfileClick('Taapsee Pannu','filmmaker and television personality','Taapsee-Pannu')} className="profile taapsee_Pannu_profile">
               {/* <Link to="/chatPage"> */}
-              <Link to="/chatPage/Taapsee Pannu">
+              {/* <Link to="/chatPage/Taapsee Pannu"> */}
                 <div className="horizontal_line">
                   <div className="red_circle"></div>
                 </div>
@@ -307,13 +338,12 @@ const home = () => {
                     filmmaker and television personality
                   </p>
                 </div>
-              </Link>
+              {/* </Link> */}
             </div>
 
 
 
-            <div className="profile urvashi_Rautela_profile">
-              <Link to="/chatPage/Urvashi Rautela">
+            <div onClick={() => handleProfileClick('Urvashi Rautela','filmmaker and television personality','Urvashi-Rautela')} className="profile urvashi_Rautela_profile">
                 <div className="horizontal_line">
                   <div className="red_circle"></div>
                 </div>
@@ -325,10 +355,9 @@ const home = () => {
                     filmmaker and television personality
                   </p>
                 </div>
-              </Link>
             </div>
 
-            <div className="profile sukhwinder_Singh_profile">
+            <div onClick={() => handleProfileClick('Sukhwinder Singh','filmmaker and television personality','Sukhwinder-Singh')} className="profile sukhwinder_Singh_profile">
               <div className="horizontal_line">
                 <div className="red_circle"></div>
               </div>
@@ -342,7 +371,7 @@ const home = () => {
               </div>
             </div>
 
-            <div className="profile malaika_Arora_profile">
+            <div onClick={() => handleProfileClick('Taapsee Pannu')} className="profile malaika_Arora_profile">
               <div className="horizontal_line">
                 <div className="red_circle"></div>
               </div>
@@ -356,7 +385,7 @@ const home = () => {
               </div>
             </div>
 
-            <div className="profile karan_Johar_profile">
+            <div onClick={() => handleProfileClick('Taapsee Pannu')} className="profile karan_Johar_profile">
               <div className="horizontal_line">
                 <div className="red_circle"></div>
               </div>
@@ -372,12 +401,12 @@ const home = () => {
           </div>
         </div>
 
-        <div className="explore_influencers_section">
+        <div  className="explore_influencers_section">
           <div className="Explore_Influencers">
             Explore <span>Influencers</span>
           </div>
           <div className="profile_cards">
-            <div className="profile agnijita_Banerjee_profile">
+            <div onClick={() => handleProfileClick('Taapsee Pannu')} className="profile agnijita_Banerjee_profile">
               <div className="horizontal_line">
                 <div className="red_circle"></div>
               </div>
@@ -391,7 +420,7 @@ const home = () => {
               </div>
             </div>
 
-            <div className="profile hema_Adhikari_profile">
+            <div onClick={() => handleProfileClick('Taapsee Pannu')} className="profile hema_Adhikari_profile">
               <div className="horizontal_line">
                 <div className="red_circle"></div>
               </div>
@@ -405,7 +434,7 @@ const home = () => {
               </div>
             </div>
 
-            <div className="profile rugees_Vini_profile">
+            <div onClick={() => handleProfileClick('Taapsee Pannu')} className="profile rugees_Vini_profile">
               <div className="horizontal_line">
                 <div className="red_circle"></div>
               </div>
@@ -419,7 +448,7 @@ const home = () => {
               </div>
             </div>
 
-            <div className="profile shalini_Chopra_profile">
+            <div onClick={() => handleProfileClick('Taapsee Pannu')} className="profile shalini_Chopra_profile">
               <div className="horizontal_line">
                 <div className="red_circle"></div>
               </div>
@@ -433,7 +462,7 @@ const home = () => {
               </div>
             </div>
 
-            <div className="profile nilam_Parmar_profile">
+            <div onClick={() => handleProfileClick('Taapsee Pannu')} className="profile nilam_Parmar_profile">
               <div className="horizontal_line">
                 <div className="red_circle"></div>
               </div>
@@ -454,7 +483,7 @@ const home = () => {
             Explore <span>Sport Influencers</span>
           </div>
           <div className="profile_cards">
-            <div className="profile virat_Kohli_profile">
+            <div onClick={() => handleProfileClick('Taapsee Pannu')} className="profile virat_Kohli_profile">
               <div className="horizontal_line">
                 <div className="red_circle"></div>
               </div>
@@ -468,7 +497,7 @@ const home = () => {
               </div>
             </div>
 
-            <div className="profile dhoni_profile">
+            <div onClick={() => handleProfileClick('Taapsee Pannu')} className="profile dhoni_profile">
               <div className="horizontal_line">
                 <div className="red_circle"></div>
               </div>
@@ -482,7 +511,7 @@ const home = () => {
               </div>
             </div>
 
-            <div className="profile geeta_Phogat_profile">
+            <div onClick={() => handleProfileClick('Taapsee Pannu')} className="profile geeta_Phogat_profile">
               <div className="horizontal_line">
                 <div className="red_circle"></div>
               </div>
@@ -496,7 +525,7 @@ const home = () => {
               </div>
             </div>
 
-            <div className="profile rani_Rampal_profile">
+            <div onClick={() => handleProfileClick('Taapsee Pannu')} className="profile rani_Rampal_profile">
               <div className="horizontal_line">
                 <div className="red_circle"></div>
               </div>
@@ -508,7 +537,7 @@ const home = () => {
               </div>
             </div>
 
-            <div className="profile guru_Mann_profile">
+            <div onClick={() => handleProfileClick('Guru Mann','Fitness Trainer & Fitness Celebrity')} className="profile guru_Mann_profile">
               <div className="horizontal_line">
                 <div className="red_circle"></div>
               </div>
