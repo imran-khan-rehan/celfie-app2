@@ -10,7 +10,7 @@ const Navbar = () => {
   const location = useLocation();
   const isChatPage = location.pathname.includes("/chatPage/");
 
-    const my="hello";
+  const my = "hello";
   const [showSignup, setShowSignup] = useState(false);
 
   const handleSignupButtonClick = () => {
@@ -21,29 +21,29 @@ const Navbar = () => {
   return (
     <>
       <nav>
-     {showSignup && <Signup />}
+        {showSignup && <Signup />}
         <div className="menu_options">
           <div className="logo">
-            <img src={Logo} alt="Celebfie"  />
+            <img src={Logo} alt="Celebfie" />
           </div>
           <div className="nav_list">
             <ul className="menu_items">
-            <Link to="/home">  <li>
-                
+              <Link to="/home">  <li>
+
                 <b className={`nav_options ${!isChatPage && "active"}`}> <span className="material-symbols-outlined ico"> home </span> Home</b>
-                
+
               </li>
               </Link>
-              <Link to="/chatPage/imran">   
-              <li>
-          
-               <b className={`nav_options ${isChatPage && "active"}`}>   <span className="material-symbols-outlined ico"> forum </span> Chat</b>
-               
-              </li>
+              <Link to="/chatPage/">
+                <li>
+
+                  <b className={`nav_options ${isChatPage && "active"}`}>   <span className="material-symbols-outlined ico"> forum </span> Chat</b>
+
+                </li>
 
               </Link>
               <li>
-               
+
                 <b className="nav_options" >  <span className="material-symbols-outlined ico"> search </span>Search</b>
               </li>
             </ul>
@@ -59,7 +59,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        <img src={BurgerMenu} className="burger_menu" alt=""/>
+        <img src={BurgerMenu} className="burger_menu" alt="" />
       </nav>
     </>
   )

@@ -12,7 +12,7 @@ const home = () => {
   return (
     <>
       <section className="homepage">
-      
+
         <div className="mobile_banner"></div>
         <div className="banner_section">
           <div className="blobs">
@@ -294,36 +294,38 @@ const home = () => {
 
 
             <div className="profile taapsee_Pannu_profile">
-            {/* <Link to="/chatPage"> */}
-            <Link to="/chatPage/taapsee_Pannu">
-              <div className="horizontal_line">
-                <div className="red_circle"></div>
-              </div>
+              {/* <Link to="/chatPage"> */}
+              <Link to="/chatPage/Taapsee Pannu">
+                <div className="horizontal_line">
+                  <div className="red_circle"></div>
+                </div>
 
-              <div className="filmmaker-and-television">
-                <b className="celeb_name">Taapsee Pannu</b>
-                <br />
-                <p className="bottom_text">
-                  filmmaker and television personality
-                </p>
-              </div>
+                <div className="filmmaker-and-television">
+                  <b className="celeb_name">Taapsee Pannu</b>
+                  <br />
+                  <p className="bottom_text">
+                    filmmaker and television personality
+                  </p>
+                </div>
               </Link>
             </div>
-            
-          
+
+
 
             <div className="profile urvashi_Rautela_profile">
-              <div className="horizontal_line">
-                <div className="red_circle"></div>
-              </div>
+              <Link to="/chatPage/Urvashi Rautela">
+                <div className="horizontal_line">
+                  <div className="red_circle"></div>
+                </div>
 
-              <div className="filmmaker-and-television">
-                <b className="celeb_name">Urvashi Rautela</b>
-                <br />
-                <p className="bottom_text">
-                  filmmaker and television personality
-                </p>
-              </div>
+                <div className="filmmaker-and-television">
+                  <b className="celeb_name">Urvashi Rautela</b>
+                  <br />
+                  <p className="bottom_text">
+                    filmmaker and television personality
+                  </p>
+                </div>
+              </Link>
             </div>
 
             <div className="profile sukhwinder_Singh_profile">
@@ -475,7 +477,7 @@ const home = () => {
                 <b className="celeb_name">Dhoni</b>
                 <br />
                 <p className="bottom_text">
-                International physique Athlete
+                  International physique Athlete
                 </p>
               </div>
             </div>
@@ -617,7 +619,7 @@ const home = () => {
         />
       </footer>
 
- 
+
     </>
   );
 };

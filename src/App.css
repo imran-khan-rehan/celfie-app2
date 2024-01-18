@@ -1,3 +1,139 @@
+.profile-header {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.profile-section-mb {
+  padding-bottom: 120px;
+  align-items: center;
+  background: #0A0F1F;
+}
+
+.profile-back-arrow {
+  width: 100%;
+  height: 113px;
+  flex-shrink: 0;
+  opacity: 0.8;
+  background: linear-gradient(180deg, #000 16.37%, rgba(0, 0, 0, 0.00) 93.36%);
+}
+
+.profile-back-arrow img {
+  width: 31px;
+  height: 31px;
+  flex-shrink: 0;
+  padding: 15px 11px;
+}
+
+.profile-header-bottom {
+  width: 100%;
+  height: 78px;
+  flex-shrink: 0;
+  opacity: 0.8;
+  background: linear-gradient(180deg, #0A0F1F 16.37%, rgba(10, 15, 31, 0.00) 93.36%);
+}
+
+.profile-gradient-background {
+  width: 100%;
+  height: 328px;
+  flex-shrink: 0;
+
+}
+
+.profile-header {
+  background: linear-gradient(0deg, #0A0F1F 0%, rgba(10, 15, 31, 0.00) 72.93%), url('./assets/icons/bg.png'), lightgray 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 361px;
+  flex-shrink: 0;
+}
+
+.profile-icon img {
+  margin: auto;
+}
+
+.profile-header-bottom h2 {
+  color: #FFF;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 0;
+}
+
+.profile-header-bottom p {
+  color: #FFF;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 9px;
+  /* 86.667% */
+  margin: 12px;
+
+}
+
+.sub-talk-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.sub-talk-btn a {
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+  gap: 4px;
+  border: 2px solid #4967A6;
+  background: #0A0F1F;
+  text-decoration: none;
+  color: #85A0D9;
+  font-family: sans-serif;
+  padding: 0 10px;
+  width: 160px;
+  height: 50px;
+  font-size: 18px;
+}
+
+.line {
+  background: #354269;
+  height: 1px;
+  margin: 40px auto;
+  margin-bottom: 30px;
+}
+.below-header{
+  width: 90%;
+  margin: auto
+}
+.pr-services{
+  color: #7585CB;
+  font-size: 17px;
+  font-family: sans-serif;
+}
+.services-btns
+{
+  border-radius: 7px;
+  border: 2px solid #4967A6;
+  background: #0A0F1F;
+  text-decoration: none;
+  color: #85A0D9;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  font-size: 19px;
+  height: 50px;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+
 * {
   margin: 0;
   padding: 0;
